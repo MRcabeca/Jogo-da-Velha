@@ -1,43 +1,65 @@
+body{
+    background-image: url("fundo.jfif")
+}
+
+#jogo-div{
+    display: flex;
+    justify-content: center;
+    width:705px;
+    height: 500px;
+    padding: 0px;
+    margin-left: 23.5%;
+    margin-top:5%;
+    box-shadow: 20px 30px 20px black;
+}
 
 #quadro{
-    display: inline-block;
-    justify-content: center;
     margin:7% 20% 7% 20%;
-    border: solid 10px black;
+    border: solid 10px rgb(3, 66, 19);
     height:480px;
     width: 480px;
+    margin: 0px;
 }
 
 #jogo-menu{
-    width:15%;
-    height:20%;
-    display: block;
-    justify-content: center;
+    width:200px;
+    height:490px;
     text-align: center;
-    float:right;
-    border: solid 3px black;
+    border: solid 5px rgb(12, 15, 173);
+    background-color: chocolate;
+    float:right ;
+    margin: 0px;
  
 }
 
 #resetar{
-    width:98%;
-    margin: 0% 0%;
-    margin:1% 1% 0% 1%;
+    margin:140px 0 0 0;
+    width: 185px;
 }
-#x{
-    margin-right:4%;
-    margin-left:1%;
+
+#o,#x,#umjog,#doisjog{
+    margin-top:40px;
+    width:95px;
 }
-#y{
-    margin-right : 1%;
-}
-#x,#y{
-    height:50% !important;
-    width:45%;
-    margin:2% 0%;
+#x,#umjog{
+    margin-left:1px;
 }
 
 .placar{
     text-align: center;
-    width :98%;
+    margin: 10px 30px;
+    width:105px;
+}
+
+#jogo-menu *{
+    border-radius: 10px;
+}
+
+#jogo-menu label{
+    font-size: 18px;
+    color:rgba(19, 6, 56, 0.986);
+}
+
+#dificuldade{
+    margin : 40px 10px 20px 10px ;
 }

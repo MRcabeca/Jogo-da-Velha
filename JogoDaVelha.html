@@ -18,13 +18,25 @@
 
             <div id="jogo-menu">
                 <label for="placarX">Pontuação do Jogador X</label>
-                <input type="text" class="placar" id="placarX"value=000 disabled>
-                <label for="placarY">Pontuação do Jogador Y</label>
-                <input type="text" class="placar" id="placarY"value=000 disabled>
-                <button id="resetar" onclick="resetar()">Resetar</button>
+                <input type="number" class="placar" id="placarX"value=0 disabled>
+                <label for="placarY">Pontuação do Jogador O</label>
+                <input type="number" class="placar" id="placarY"value=0 disabled>
+
+                <button id="umjog" onclick="jogadores(1)">1 Player</button>
+                <button id="doisjog" onclick="jogadores(2)">2 Player</button>
+
+                <select class="" id="dificuldade" onchange="alteraDificuldade()">
+                    <option value="0">Possível</option>
+                    <option value="1">Impossível</option>
+                </select>
+
                 <button id="x" onclick="comeco(1)">Iniciar com X</button>
                 <button id="o"onclick="comeco(0)">Iniciar com O</button>
+                <button id="resetar" onclick="resetar()">Resetar Game</button>
+
             </div>
+
         </div>
+
     </body>
 </html>
