@@ -17,9 +17,13 @@
             </div>
 
             <div id="jogo-menu">
-                <button id="resetar">Resetar</button>
-                <button id="x">Iniciar com X</button>
-                <button id="o">Iniciar com O</button>
+                <label for="placarX">Pontuação do Jogador X</label>
+                <input type="text" class="placar" id="placarX"value=000 disabled>
+                <label for="placarY">Pontuação do Jogador Y</label>
+                <input type="text" class="placar" id="placarY"value=000 disabled>
+                <button id="resetar" onclick="resetar()">Resetar</button>
+                <button id="x" onclick="comeco(1)">Iniciar com X</button>
+                <button id="o"onclick="comeco(0)">Iniciar com O</button>
             </div>
         </div>
     </body>

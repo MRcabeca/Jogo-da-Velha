@@ -13,6 +13,7 @@
     height:20%;
     display: block;
     justify-content: center;
+    text-align: center;
     float:right;
     border: solid 3px black;
  
@@ -34,4 +35,9 @@
     height:50% !important;
     width:45%;
     margin:2% 0%;
+}
+
+.placar{
+    text-align: center;
+    width :98%;
 }
