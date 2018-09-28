@@ -32,6 +32,14 @@ window.onload =function(){
     desenhaCampo();
 }
 
+function ativacao(ativo,inativo){
+    var ativo = document.getElementById(ativo);
+    var inativo = document.getElementById(inativo);
+
+    ativo.classList.add("ativo");
+    inativo.classList.remove("ativo")
+}   
+
 function resetar(num){
     //
     if(init == 1){
@@ -46,11 +54,19 @@ function resetar(num){
 
     desenhaCampo();
 }
+
+function resetarTudo(){
+    resetar();
+    placarX.innerHTML = 0;
+    placarY.innerHTML = 0;
+    pX=0;
+    pY=0;
+}
 function alteraDificuldade(){
 
     resetar();
-    placarX.value = 0;
-    placarY.value = 0;
+    placarX.innerHTML = 0;
+    placarY.innerHTML = 0;
     pX=0;
     pY=0;
 }
@@ -73,7 +89,7 @@ function desenhaCampo(){
     contexto.lineWidth= 10;
     contexto.strokeStyle='rgb(242, 242, 242)';
     //definindo a cor de fundo
-    contexto.fillStyle ='rgb(0, 102, 0)';
+    contexto.fillStyle ='#003300';
     //desenhando o fundo do canvas
     contexto.fillRect(0,0,canvas.width,canvas.height);
     //desenha as linha do canvas
@@ -88,7 +104,7 @@ function clique(event){
     }
 }
 
-function comeco(inicial){
+function comeco(inicial,id,contrario){
     if(inicial == 0){
         valor = 0;
         init = 0;
@@ -96,14 +112,14 @@ function comeco(inicial){
         valor = 1;
          init = 1;
     }
-    placarX.value = 0;
-    placarY.value = 0;
+    placarX.innerHTML = 0;
+    placarY.innerHTML = 0;
     pX=0;
     pY=0;
-
+    ativacao(id,contrario);
 }
 
-function jogadores(n){
+function jogadores(n,id,contrario){
     if(n == 1){
         jogNum = 1;
         dificuldade.style.visibility = "visible";
@@ -111,10 +127,11 @@ function jogadores(n){
         jogNum = 2;
         dificuldade.style.visibility = "hidden";
     }
-    placarX.value = 0;
-    placarY.value = 0;
+    placarX.innerHTML = 0;
+    placarY.innerHTML = 0;
     pX=0;
     pY=0;
+    ativacao(id,contrario);
 }
 
 function proximo(numero,quadro,modX,modY){
@@ -242,7 +259,7 @@ function vitoria(){
         desenhalinha(10,80,470,80);
         setTimeout(function(){ resetar(valor);}, 1500);
         pY++;
-        placarY.value=pY;
+        placarY.innerHTML=pY;
         aviso = 1;
     }
     //vitoria do O na segunda linha
@@ -250,7 +267,7 @@ function vitoria(){
         desenhalinha(10,240,470,240);
         setTimeout(function(){ resetar(valor);}, 1500);
         pY++;
-        placarY.value=pY;
+        placarY.innerHTML=pY;
         aviso = 1;
     }
     //vitoria do O na terceira linha
@@ -258,7 +275,7 @@ function vitoria(){
         desenhalinha(10,400,470,400);
         setTimeout(function(){ resetar(valor);}, 1500);
         pY++;
-        placarY.value=pY;
+        placarY.innerHTML=pY;
         aviso = 1;
     }
     //vitoria do O na primeira coluna
@@ -266,7 +283,7 @@ function vitoria(){
         desenhalinha(80,10,80,470);
         setTimeout(function(){ resetar(valor);}, 1500);
         pY++;
-        placarY.value=pY;
+        placarY.innerHTML=pY;
         aviso = 1;
     }
     //vitoria do O na segunda coluna
@@ -274,7 +291,7 @@ function vitoria(){
         desenhalinha(240,10,240,470);
         setTimeout(function(){ resetar(valor);}, 1500);
         pY++;
-        placarY.value=pY;
+        placarY.innerHTML=pY;
         aviso = 1;
     }
     //vitoria do O na terceira coluna
@@ -282,7 +299,7 @@ function vitoria(){
         desenhalinha(400,10,400,470);
         setTimeout(function(){ resetar(valor);}, 1500);
         pY++;
-        placarY.value=pY;
+        placarY.innerHTML=pY;
         aviso = 1;
     }
     //vitoria do O na diagonal principal
@@ -290,7 +307,7 @@ function vitoria(){
         desenhalinha(10,10,470,470);
         setTimeout(function(){ resetar(valor);}, 1500);
         pY++;
-        placarY.value=pY;
+        placarY.innerHTML=pY;
         aviso = 1;
     }
     //vitoria do O na diagonal secundária
@@ -298,7 +315,7 @@ function vitoria(){
         desenhalinha(470,10,10,470);
         setTimeout(function(){ resetar(valor);}, 1500);
         pY++;
-        placarY.value=pY;
+        placarY.innerHTML=pY;
         aviso = 1;
     }
 
@@ -307,7 +324,7 @@ function vitoria(){
         desenhalinha(10,80,470,80);
         setTimeout(function(){ resetar(valor);}, 1500);
         pX++;
-        placarX.value=pX;
+        placarX.innerHTML=pX;
         aviso = 1;
     }
     //vitoria do X na segunda linha
@@ -315,7 +332,7 @@ function vitoria(){
         desenhalinha(10,240,470,240);
         setTimeout(function(){ resetar(valor);}, 1500);
         pX++;
-        placarX.value=pX;
+        placarX.innerHTML=pX;
         aviso = 1;
     }
     //vitoria do X na terceira linha
@@ -323,7 +340,7 @@ function vitoria(){
         desenhalinha(10,400,470,400);
         setTimeout(function(){ resetar(valor);}, 1500);
         pX++;
-        placarX.value=pX;
+        placarX.innerHTML=pX;
         aviso = 1;
     }
     //vitoria do X na primeira coluna
@@ -331,7 +348,7 @@ function vitoria(){
         desenhalinha(80,10,80,470);
         setTimeout(function(){ resetar(valor);}, 1500);
         pX++;
-        placarX.value=pX;
+        placarX.innerHTML=pX;
         aviso = 1;
     }
     //vitoria do X na segunda coluna
@@ -339,7 +356,7 @@ function vitoria(){
         desenhalinha(240,10,240,470);
         setTimeout(function(){ resetar(valor);}, 1500);
         pX++;
-        placarX.value=pX;
+        placarX.innerHTML=pX;
         aviso = 1;
     }
     //vitoria do X na terceira coluna
@@ -347,7 +364,7 @@ function vitoria(){
         desenhalinha(400,10,400,470);
         setTimeout(function(){ resetar(valor);}, 1500);
         pX++;
-        placarX.value=pX;
+        placarX.innerHTML=pX;
         aviso = 1;
     }
     //vitoria do X na diagonal principal
@@ -355,7 +372,7 @@ function vitoria(){
         desenhalinha(10,10,470,470);
         setTimeout(function(){ resetar(valor);}, 1500);
         pX++;
-        placarX.value=pX;
+        placarX.innerHTML=pX;
         aviso = 1;
     }
     //vitoria do X na diagonal secundária
@@ -363,7 +380,7 @@ function vitoria(){
         desenhalinha(470,10,10,470);
         setTimeout(function(){ resetar(valor);}, 1500);
         pX++;
-        placarX.value=pX;
+        placarX.innerHTML=pX;
         aviso = 1;
     }
     //empate
@@ -597,7 +614,7 @@ function oponente(){
         //a maior prioridade é que se o oponente comçar em um canto é necessário por no meio(somente no
         //impossivel)
         else if((tabuleiro[0] != null || tabuleiro[2] != null || tabuleiro[6] != null
-            || tabuleiro[8] != null) && tabuleiro[4] == null && dificuldade.value ==1){
+            || tabuleiro[8] != null) && tabuleiro[4] == null && dificuldade.innerHTML ==1){
                 proximo(valor,4,3,3);
             }
         //em condições normais o computador tentará preencher os cantos(essas são jogado aleatórias

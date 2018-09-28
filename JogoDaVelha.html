@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <title>Jogo da Velha</title>
         <link rel="stylesheet" href="estilo.css">
+	<link rel="icon" href="velha.jpg">	
 
         <script src="script.js"></script>
 
@@ -18,21 +19,21 @@
 
             <div id="jogo-menu">
                 <label for="placarX">Pontuação do Jogador X</label>
-                <input type="number" class="placar" id="placarX"value=0 disabled>
+                <p class="placar" id="placarX">0</p>
                 <label for="placarY">Pontuação do Jogador O</label>
-                <input type="number" class="placar" id="placarY"value=0 disabled>
+                <p class="placar" id="placarY" >0</p>
 
-                <button id="umjog" onclick="jogadores(1)">1 Player</button>
-                <button id="doisjog" onclick="jogadores(2)">2 Player</button>
+                <button id="umjog" onclick="jogadores(1,'umjog','doisjog')">1 Player</button>
+                <button id="doisjog" onclick="jogadores(2,'doisjog','umjog')">2 Player</button>
 
                 <select class="" id="dificuldade" onchange="alteraDificuldade()">
                     <option value="0">Possível</option>
                     <option value="1">Impossível</option>
                 </select>
 
-                <button id="x" onclick="comeco(1)">Iniciar com X</button>
-                <button id="o"onclick="comeco(0)">Iniciar com O</button>
-                <button id="resetar" onclick="resetar()">Resetar Game</button>
+                <button id="x" onclick="comeco(1,'x','o')">Iniciar com X</button>
+                <button id="o"onclick="comeco(0,'o','x')">Iniciar com O</button>
+                <button id="resetar" onclick="resetarTudo()">Resetar Game</button>
 
             </div>
 

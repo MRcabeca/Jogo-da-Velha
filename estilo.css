@@ -10,45 +10,63 @@ body{
     padding: 0px;
     margin-left: 23.5%;
     margin-top:5%;
-    box-shadow: 20px 30px 20px black;
+    box-shadow: 0px 0px 60px black;
 }
 
 #quadro{
     margin:7% 20% 7% 20%;
-    border: solid 10px rgb(3, 66, 19);
+    border: solid 10px #47476b;
     height:480px;
     width: 480px;
     margin: 0px;
+    cursor: pointer;
+    border-radius: 10px 0px 0px 10px;
 }
 
 #jogo-menu{
     width:200px;
-    height:490px;
+    height:470px;
     text-align: center;
     border: solid 5px rgb(12, 15, 173);
-    background-color: chocolate;
+    background-color: rgb(34, 33, 33);
     float:right ;
     margin: 0px;
- 
+    padding:10px;
+    justify-content: center;
+    border-radius: 0px 10px 10px 0px;
 }
 
 #resetar{
-    margin:140px 0 0 0;
+    margin:50px 0 0 0;
     width: 185px;
+    height:30px;
 }
 
+#resetare:active{
+    background-color:rgb(10, 10, 180);
+    box-shadow: 0 3px rgb(19, 5, 5);
+    transform: translateY(6px);
+}
+
+
 #o,#x,#umjog,#doisjog{
-    margin-top:40px;
-    width:95px;
+    margin-top:25px;
+    width:85px;
+    height:40px;
 }
 #x,#umjog{
     margin-left:1px;
 }
 
 .placar{
+    font-size:30px;
     text-align: center;
-    margin: 10px 30px;
-    width:105px;
+    margin: 20px 30px 20px 30px;
+    width:130px;
+    background-color: #404040;
+    color: white;
+    border: 2px outset silver;
+    box-shadow : 0px 0px 10px black;
 }
 
 #jogo-menu *{
@@ -57,9 +75,42 @@ body{
 
 #jogo-menu label{
     font-size: 18px;
-    color:rgba(19, 6, 56, 0.986);
+    color: white;
+    text-shadow: 0px 3px rgb(27, 7, 7);
+    border-radius: 0px;
+    border: 3px outset silver;
+    padding:3px;
 }
 
 #dificuldade{
-    margin : 40px 10px 20px 10px ;
+    margin : 30px 10px 0px 10px ;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(10, 10, 180);
+    border: 2px outset silver;
+    box-shadow: 0 9px rgb(27, 7, 7);
+}
+
+
+#jogo-menu button {
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(10, 10, 180);
+    border: none;
+    box-shadow: 0 9px rgb(27, 7, 7);
+  }
+  
+#jogo-menu button:hover {
+      background-color:rgb(10, 10, 236);
+}
+  
+#jogo-menu button:active{
+    background-color:rgb(10, 10, 236);
+    box-shadow: 0 3px rgb(19, 5, 5);
+    transform: translateY(6px);
+  }
+
+.ativo{
+    color:#ff3333 !important;
 }
