@@ -614,7 +614,7 @@ function oponente(){
         //a maior prioridade é que se o oponente comçar em um canto é necessário por no meio(somente no
         //impossivel)
         else if((tabuleiro[0] != null || tabuleiro[2] != null || tabuleiro[6] != null
-            || tabuleiro[8] != null) && tabuleiro[4] == null && dificuldade.innerHTML ==1){
+            || tabuleiro[8] != null) && tabuleiro[4] == null && dificuldade.value ==1){
                 proximo(valor,4,3,3);
             }
         //em condições normais o computador tentará preencher os cantos(essas são jogado aleatórias
