@@ -15,7 +15,7 @@ body{
 
 #quadro{
     margin:7% 20% 7% 20%;
-    border: solid 10px #47476b;
+    border: solid 10px #424242;
     height:480px;
     width: 480px;
     margin: 0px;
@@ -27,8 +27,8 @@ body{
     width:200px;
     height:470px;
     text-align: center;
-    border: solid 5px rgb(12, 15, 173);
-    background-color: rgb(34, 33, 33);
+    border: solid 5px #424242;
+    background-color: #1b5e20;
     float:right ;
     margin: 0px;
     padding:10px;
@@ -80,6 +80,7 @@ body{
     border-radius: 0px;
     border: 3px outset silver;
     padding:3px;
+    background-color:#404040;
 }
 
 #dificuldade{
